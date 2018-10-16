@@ -1,0 +1,13 @@
+package domain.enums;
+
+public enum Alignment {
+  LAWFUL_GOOD,
+  CHAOTIC_GOOD,
+  NEUTRAL_GOOD,
+  LAWFUL_NEUTRAL,
+  CHAOTIC_NEUTRAL,
+  TRUE_NEUTRAL,
+  LAWFUL_EVIL,
+  CHAOTIC_EVIL,
+  NEUTRAL_EVIL
+}
