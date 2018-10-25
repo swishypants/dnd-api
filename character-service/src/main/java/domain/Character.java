@@ -6,11 +6,16 @@ import domain.enums.Gender;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.data.annotation.Id;
 
 import java.util.Map;
 
 @Data
 public class Character {
+
+  @Id
+  String id;
+
   // base character traits
   CharacterRace characterRace;
   ClassDetails classDetails;
@@ -57,4 +62,5 @@ public class Character {
     int max;
     int curr;
   }
+
 }
