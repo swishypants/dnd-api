@@ -2,7 +2,6 @@ package domain;
 
 import domain.enums.CharacterClass;
 import domain.enums.CharacterRace;
-import domain.enums.Gender;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
@@ -11,50 +10,49 @@ import java.util.Map;
 
 @Data
 public class Character {
-  // base character traits
-  CharacterRace characterRace;
-  ClassDetails classDetails;
 
-  // character stats information
-  int level; // total character level
-  Stats stats;
-  HitPoints hitPoints;
+    String name;
 
-  // gameplay related traits
-  int speed;
-  int initiativeBonus;
+    // base character traits
+    CharacterRace characterRace;
+    ClassDetails classDetails;
 
-  // fluff traits
-  String name;
-  Gender gender;
-  int age;
+    // character stats information
+    int level; // total character level
+    Stats stats;
+    HitPoints hitPoints;
 
-  @Getter
-  @Setter
-  private class ClassDetails {
-    Map<CharacterClass, Integer> classMap;
-  }
+    // gameplay related stats
+    int speed;
+    int initiativeBonus;
 
-  @Getter
-  @Setter
-  private class Stats {
-    int strength;
-    int dexterity;
-    int constitution;
-    int intelligence;
-    int wisdom;
-    int charisma;
-
-    // todo - should this live in the service layer?
-    int getModifier(int stat) {
-      return (stat / 2) - 5;
+    @Getter
+    @Setter
+    private class ClassDetails {
+        // key=class value=levels
+        Map<CharacterClass, Integer> classLevelsMap;
     }
-  }
 
-  @Getter
-  @Setter
-  private class HitPoints {
-    int max;
-    int curr;
-  }
+    @Getter
+    @Setter
+    private class Stats {
+        int strength;
+        int dexterity;
+        int constitution;
+        int intelligence;
+        int wisdom;
+        int charisma;
+
+        // todo - should this live in the service layer?
+        int getModifier(int stat) {
+            return (stat / 2) - 5;
+        }
+    }
+
+    @Getter
+    @Setter
+    private class HitPoints {
+        int max;
+        int curr;
+    }
 }
