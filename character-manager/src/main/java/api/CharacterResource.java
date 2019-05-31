@@ -1,10 +1,10 @@
 package api;
 
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class Hello {
+public class CharacterResource {
 
   @RequestMapping("/")
   public String index() {
