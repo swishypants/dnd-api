@@ -1,4 +1,4 @@
-package repository;
+package charactermanager.repository;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 

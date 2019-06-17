@@ -1,7 +1,7 @@
-package domain;
+package charactermanager.domain;
 
-import domain.enums.CharacterClass;
-import domain.enums.CharacterRace;
+import charactermanager.domain.enums.CharacterClass;
+import charactermanager.domain.enums.CharacterRace;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;

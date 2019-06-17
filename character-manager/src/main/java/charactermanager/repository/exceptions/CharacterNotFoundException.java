@@ -1,4 +1,4 @@
-package repository.exceptions;
+package charactermanager.repository.exceptions;
 
 public class CharacterNotFoundException extends RuntimeException {
 

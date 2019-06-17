@@ -1,7 +1,7 @@
-package dto;
+package charactermanager.dto;
 
-import domain.enums.CharacterClass;
-import domain.enums.CharacterRace;
+import charactermanager.domain.enums.CharacterClass;
+import charactermanager.domain.enums.CharacterRace;
 
 /**
  * For now, assume all newly created characters start at level 1.

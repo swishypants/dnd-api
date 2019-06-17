@@ -1,7 +1,7 @@
-package service;
+package charactermanager.service;
 
-import repository.CharacterRepository;
-import repository.exceptions.CharacterNotFoundException;
+import charactermanager.repository.CharacterRepository;
+import charactermanager.repository.exceptions.CharacterNotFoundException;
 
 public class CharacterServiceImpl implements CharacterService {
 

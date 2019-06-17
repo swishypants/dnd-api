@@ -1,4 +1,4 @@
-package domain.enums;
+package charactermanager.domain.enums;
 
 public enum CharacterClass {
   BARBARIAN,
