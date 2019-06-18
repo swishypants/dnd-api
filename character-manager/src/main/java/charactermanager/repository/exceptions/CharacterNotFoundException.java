@@ -2,7 +2,7 @@ package charactermanager.repository.exceptions;
 
 public class CharacterNotFoundException extends RuntimeException {
 
-  public CharacterNotFoundException(String message) {
-    super(message);
+  public CharacterNotFoundException(String id) {
+    super("Unable to find character with id=" + id);
   }
 }

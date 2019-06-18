@@ -2,6 +2,7 @@ package charactermanager.service;
 
 import charactermanager.repository.CharacterRepository;
 import charactermanager.repository.exceptions.CharacterNotFoundException;
+import java.util.Optional;
 
 public class CharacterServiceImpl implements CharacterService {
 
@@ -13,7 +14,7 @@ public class CharacterServiceImpl implements CharacterService {
 
   @Override
   public Character getCharacter(String id) {
-    return (Character) characterRepository.findById(id)
-        .orElseThrow(() -> new CharacterNotFoundException("Unable to find character with id=" + id));
+    return (Character) Optional.ofNullable(characterRepository.findById(id))
+        .orElseThrow(() -> new CharacterNotFoundException(id)).get();
   }
 }

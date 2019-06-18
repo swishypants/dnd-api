@@ -27,7 +27,7 @@ public class CharacterResource {
   }
 
   @PostMapping
-  public void createNewCharacter(CreateCharacterRequestDTO createCharacterRequestDTO) {
+  public void createCharacter(CreateCharacterRequestDTO createCharacterRequestDTO) {
 
   }
 }
