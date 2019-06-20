@@ -4,11 +4,11 @@ import charactermanager.domain.enums.CharacterClass;
 import charactermanager.domain.enums.CharacterRace;
 import java.util.Map;
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 
 @Data
 public class CharacterResponseDTO {
+
+  String id;
 
   String name;
 
@@ -25,16 +25,12 @@ public class CharacterResponseDTO {
   int speed;
   int initiativeBonus;
 
-  @Getter
-  @Setter
   private class ClassDetails {
 
     // key=class value=levels
     Map<CharacterClass, Integer> classLevelsMap;
   }
 
-  @Getter
-  @Setter
   private class Stats {
 
     int strength;
@@ -50,8 +46,6 @@ public class CharacterResponseDTO {
     }
   }
 
-  @Getter
-  @Setter
   private class HitPoints {
 
     int max;
