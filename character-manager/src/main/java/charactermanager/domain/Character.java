@@ -3,14 +3,14 @@ package charactermanager.domain;
 import charactermanager.domain.enums.CharacterClass;
 import charactermanager.domain.enums.CharacterRace;
 import java.util.Map;
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Data
-@Document
+@Getter
+@Setter
+@Document(collection = "characters")
 public class Character {
 
   @Id
@@ -33,7 +33,7 @@ public class Character {
 
   @Getter
   @Setter
-  private class ClassDetails {
+  public static class ClassDetails {
 
     // key=class value=levels
     Map<CharacterClass, Integer> classLevelsMap;
@@ -41,7 +41,7 @@ public class Character {
 
   @Getter
   @Setter
-  private class Stats {
+  public static class Stats {
 
     int strength;
     int dexterity;
@@ -58,7 +58,7 @@ public class Character {
 
   @Getter
   @Setter
-  private class HitPoints {
+  public static class HitPoints {
 
     int max;
     int curr;

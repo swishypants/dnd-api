@@ -1,16 +1,13 @@
-package charactermanager.dto;
+package charactermanager.domain;
 
 import charactermanager.domain.enums.CharacterClass;
 import charactermanager.domain.enums.CharacterRace;
 import lombok.Getter;
 import lombok.Setter;
 
-/**
- * For now, assume all newly created characters start at level 1.
- */
 @Getter
 @Setter
-public class CreateCharacterRequestDTO {
+public class CreateCharacterRequest {
 
   String name;
   CharacterRace characterRace;

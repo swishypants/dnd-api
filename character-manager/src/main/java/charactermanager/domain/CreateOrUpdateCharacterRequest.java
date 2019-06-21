@@ -1,4 +1,4 @@
-package charactermanager.dto;
+package charactermanager.domain;
 
 import charactermanager.domain.enums.CharacterClass;
 import charactermanager.domain.enums.CharacterRace;
@@ -8,7 +8,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class CharacterResponseDTO {
+public class CreateOrUpdateCharacterRequest {
 
   String id;
 

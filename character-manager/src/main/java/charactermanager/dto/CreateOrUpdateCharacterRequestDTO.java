@@ -8,7 +8,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class CharacterResponseDTO {
+public class CreateOrUpdateCharacterRequestDTO {
 
   String id;
 
