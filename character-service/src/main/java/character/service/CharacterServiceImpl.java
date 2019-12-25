@@ -1,11 +1,10 @@
-package charactermanager.service;
+package character.service;
 
-import charactermanager.domain.Character;
-import charactermanager.domain.CreateCharacterRequest;
-import charactermanager.domain.CreateOrUpdateCharacterRequest;
-import charactermanager.repository.CharacterRepository;
-import charactermanager.repository.exceptions.CharacterNotFoundException;
-import java.util.Optional;
+import character.domain.Character;
+import character.domain.CreateCharacterRequest;
+import character.domain.CreateOrUpdateCharacterRequest;
+import character.repository.CharacterRepository;
+import character.repository.exceptions.CharacterNotFoundException;
 
 public class CharacterServiceImpl implements CharacterService {
 
@@ -17,19 +16,17 @@ public class CharacterServiceImpl implements CharacterService {
 
   @Override
   public Character getCharacter(String id) {
-    return (Character) Optional.ofNullable(repository.findById(id))
-        .orElseThrow(() -> new CharacterNotFoundException(id)).get();
+    return repository.findByCharacterId(id)
+            .orElseThrow(() -> new CharacterNotFoundException(id));
   }
 
   @Override
   public Character createCharacter(CreateCharacterRequest createCharacterRequest) {
     return (Character) repository.save(createCharacterRequest);
-
   }
 
   @Override
   public Character updateCharacter(CreateOrUpdateCharacterRequest createOrUpdateCharacterRequest) {
     return (Character) repository.save(createOrUpdateCharacterRequest); // todo - this isn't how a patch request should update
   }
-
 }

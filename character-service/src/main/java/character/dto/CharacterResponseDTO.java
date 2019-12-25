@@ -1,10 +1,11 @@
-package charactermanager.dto;
+package character.dto;
 
-import charactermanager.domain.enums.CharacterClass;
-import charactermanager.domain.enums.CharacterRace;
-import java.util.Map;
+import character.domain.enums.CharacterClass;
+import character.domain.enums.CharacterRace;
 import lombok.Getter;
 import lombok.Setter;
+
+import java.util.Map;
 
 @Getter
 @Setter

@@ -1,8 +1,8 @@
-package charactermanager.service;
+package character.service;
 
-import charactermanager.domain.Character;
-import charactermanager.domain.CreateCharacterRequest;
-import charactermanager.domain.CreateOrUpdateCharacterRequest;
+import character.domain.Character;
+import character.domain.CreateCharacterRequest;
+import character.domain.CreateOrUpdateCharacterRequest;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -13,5 +13,4 @@ public interface CharacterService {
   Character createCharacter(CreateCharacterRequest createCharacterRequest);
 
   Character updateCharacter(CreateOrUpdateCharacterRequest createOrUpdateCharacterRequest);
-
 }

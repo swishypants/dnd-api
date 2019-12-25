@@ -1,11 +1,11 @@
-package charactermanager.mapper;
+package character.mapper;
 
-import charactermanager.domain.Character;
-import charactermanager.domain.CreateCharacterRequest;
-import charactermanager.domain.CreateOrUpdateCharacterRequest;
-import charactermanager.dto.CharacterResponseDTO;
-import charactermanager.dto.CreateCharacterRequestDTO;
-import charactermanager.dto.CreateOrUpdateCharacterRequestDTO;
+import character.domain.Character;
+import character.domain.CreateCharacterRequest;
+import character.domain.CreateOrUpdateCharacterRequest;
+import character.dto.CharacterResponseDTO;
+import character.dto.CreateCharacterRequestDTO;
+import character.dto.CreateOrUpdateCharacterRequestDTO;
 import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")

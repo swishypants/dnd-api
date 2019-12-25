@@ -1,4 +1,4 @@
-package charactermanager.domain.enums;
+package character.domain.enums;
 
 public enum CharacterRace {
   DRAGONBORN,

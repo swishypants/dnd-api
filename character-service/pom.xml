@@ -4,11 +4,18 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>dnd-api</groupId>
+    <parent>
+        <groupId>dnd-api</groupId>
+        <artifactId>dnd-api</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
     <artifactId>character-service</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <name>Character Service</name>
+    <packaging>jar</packaging>
 
     <dependencies>
+        <!-- Spring dependencies -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -18,6 +25,7 @@
             <artifactId>spring-data-mongodb</artifactId>
         </dependency>
 
+        <!-- Other dependencies -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
