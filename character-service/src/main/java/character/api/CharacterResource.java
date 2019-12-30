@@ -9,12 +9,17 @@ import character.repository.exceptions.CharacterNotFoundException;
 import character.service.CharacterService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.net.URI;
 
-@RestController("/characters/api/v1")
+@RestController
+@RequestMapping(
+        value = "/characters/api/v1",
+        consumes = MediaType.APPLICATION_JSON_VALUE,
+        produces = MediaType.APPLICATION_JSON_VALUE)
 public class CharacterResource {
 
   private Logger logger = LoggerFactory.getLogger(CharacterResource.class);
@@ -27,7 +32,7 @@ public class CharacterResource {
     this.mapper = mapper;
   }
 
-  @GetMapping("/{id}")
+    @GetMapping(value = "/{id}")
   public ResponseEntity getCharacter(@PathVariable String id) {
     logger.info("Retrieving character with id={}", id);
 
