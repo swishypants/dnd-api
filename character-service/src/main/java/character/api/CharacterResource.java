@@ -1,8 +1,6 @@
 package character.api;
 
 import character.domain.Character;
-import character.domain.CreateCharacterRequest;
-import character.domain.CreateOrUpdateCharacterRequest;
 import character.dto.CharacterResponseDTO;
 import character.dto.CreateCharacterRequestDTO;
 import character.dto.CreateOrUpdateCharacterRequestDTO;
@@ -44,8 +42,7 @@ public class CharacterResource {
           CreateCharacterRequestDTO createCharacterRequestDTO) {
     logger.info("Creating character with createCharacterRequestDTO={}", createCharacterRequestDTO);
 
-    CreateCharacterRequest createCharacterRequest =
-            mapper.toCreateCharacterRequest(createCharacterRequestDTO);
+      Character createCharacterRequest = mapper.toCharacter(createCharacterRequestDTO);
     Character character = service.createCharacter(createCharacterRequest);
     CharacterResponseDTO characterResponseDTO = mapper.toCharacterResponseDTO(character);
 
@@ -62,8 +59,7 @@ public class CharacterResource {
             "Creating or updating character with createOrUpdateCharacterRequestDTO={}",
             createOrUpdateCharacterRequestDTO);
 
-    CreateOrUpdateCharacterRequest createOrUpdateCharacterRequest =
-            mapper.toUpdateCharacterRequest(createOrUpdateCharacterRequestDTO);
+      Character createOrUpdateCharacterRequest = mapper.toCharacter(createOrUpdateCharacterRequestDTO);
     Character character = service.updateCharacter(createOrUpdateCharacterRequest);
     CharacterResponseDTO characterResponseDTO = mapper.toCharacterResponseDTO(character);
 

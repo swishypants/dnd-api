@@ -1,8 +1,6 @@
 package character.service;
 
 import character.domain.Character;
-import character.domain.CreateCharacterRequest;
-import character.domain.CreateOrUpdateCharacterRequest;
 import character.repository.CharacterRepository;
 import character.repository.exceptions.CharacterNotFoundException;
 
@@ -21,12 +19,12 @@ public class CharacterServiceImpl implements CharacterService {
   }
 
   @Override
-  public Character createCharacter(CreateCharacterRequest createCharacterRequest) {
-    return (Character) repository.save(createCharacterRequest);
+  public Character createCharacter(Character createCharacterRequest) {
+    return null; // todo - flesh this out
   }
 
   @Override
-  public Character updateCharacter(CreateOrUpdateCharacterRequest createOrUpdateCharacterRequest) {
-    return (Character) repository.save(createOrUpdateCharacterRequest); // todo - this isn't how a patch request should update
+  public Character updateCharacter(Character updateCharacterRequest) {
+    return null; // todo - flesh this out
   }
 }
